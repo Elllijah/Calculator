@@ -9,16 +9,48 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/history"
+    <LinearLayout
+        android:id="@+id/layout_settings"
         android:layout_width="match_parent"
-        android:layout_height="110sp"
-        android:textColor="@color/text_num_color"
-        android:gravity="end"
-        android:ellipsize="start"
-        android:textSize="22sp"
-        android:singleLine="true"
-        />
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/round_shape_btn"
+            android:text="DEL History"
+            android:textColor="@color/text_action_color"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/history_layout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        >
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/math_expression"
         android:layout_width="match_parent"
